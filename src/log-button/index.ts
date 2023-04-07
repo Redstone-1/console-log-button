@@ -21,6 +21,12 @@ interface IButtonLogClass {
   logTemplate?: (logBy: string, logName: string) => string;
 }
 
+interface IMaterialLogConfig {
+  logName: string;
+  type?: 'yellow' | 'orange' | 'red' | 'green' | 'cyan' | 'blue' | 'purple';
+  isLinearGradient?: boolean
+}
+
 const colorMap = new Map([
   ['yellow', '#FFC107'],
   ['orange', '#ff9800'],
@@ -48,10 +54,9 @@ const gradientColorMap = new Map([
  * @param {any} data 这里的 data 可以传多个 以 rest 参数形式会被展开
  */
 export const buttonLog = (logBy = '', logName = '', ...logData: any[]) => console.log(
-  `%c log-by-${logBy} %c ${logName} %c`,
+  `%c log-by-${logBy} %c ${logName} `,
   `background: ${VUE_DEEP_CYAN}; padding: 6px; border-radius: 1px 0 0 1px;  color: #fff`,
   `background: ${VUE_BLUE_GRAY}; padding: 6px; border-radius: 0 1px 1px 0;  color: #fff`,
-  'background: transparent',
   ...logData
 );
 
@@ -63,7 +68,7 @@ export const buttonLog = (logBy = '', logName = '', ...logData: any[]) => consol
  * - config.isLinearGradient 是否是渐变按钮
  * @param {any} data 这里的 data 可以传多个 以 rest 参数形式会被展开
  */
-export const materialButtonLog = ({ logName = '', type = 'blue', isLinearGradient = false }, ...data: any[]) => {
+export const materialButtonLog = ({ logName = '', type = 'blue', isLinearGradient = false }: IMaterialLogConfig, ...data: any[]) => {
   if (isLinearGradient) {
     console.log(`%c${logName}`, `background-image: ${gradientColorMap.get(type)}; padding: 6px 12px; border-radius: 2px; font-size: 14px; color: #fff; text-transform: uppercase; font-weight: 600;`, ...data);
   } else {

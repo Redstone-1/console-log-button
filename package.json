@@ -1,7 +1,7 @@
 {
   "name": "console-log-button",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.3",
   "type": "module",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -14,19 +14,18 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.56.0",
-    "typescript": "^4.9.4",
-    "vite": "^4.0.4"
-  },
-  "dependencies": {
     "eslint": "^8.36.0",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.0"
+    "lint-staged": "^13.2.0",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.4"
   },
   "files": [
     "lib",
     "es",
     "README",
-    "LICENSE"
+    "LICENSE",
+    "index.d.ts"
   ],
   "husky": {
     "hooks": {
@@ -44,6 +43,12 @@
     "log",
     "button"
   ],
+  "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Redstone-1/console-log-button"
+  },
+  "homepage": "https://www.npmjs.com/package/console-log-button",
   "license": "MIT",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"

@@ -3,8 +3,7 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   build: {
     target: 'modules',
-    outDir: "dist",
-    minify: false,
+    minify: true,
     rollupOptions: {
       input: ['src/index.ts'],
       output: [
