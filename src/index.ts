@@ -1,10 +1,19 @@
-import ButtonLogClass, { buttonLog, materialButtonLog } from './log-button';
+import ButtonLogClass, {
+  buttonLog,
+  materialButtonLog,
+  buttonLogUtils,
+  getDoubleButtonConfigs,
+  getMaterialConfigs,
+} from './log-button';
 import * as styleValue from './style';
 
 export {
   styleValue,
   buttonLog,
-  materialButtonLog
+  materialButtonLog,
+  buttonLogUtils,
+  getDoubleButtonConfigs,
+  getMaterialConfigs,
 };
 
 export default ButtonLogClass;

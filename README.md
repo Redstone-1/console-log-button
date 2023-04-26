@@ -44,15 +44,15 @@ import { materialButtonLog } from 'console-log-button';
  * @param {object} config log 配置
  * - config.logName - log 按钮中的文字内容
  * - config.type - 'yellow' | 'orange' | 'red' | 'green' | 'cyan' | 'blue' | 'purple'
- * - config.isLinearGradient 是否是渐变按钮
+ * - config.isGradient 是否是渐变按钮
  * @param {any} data 这里的 data 可以传多个 以 rest 参数形式会被展开
  */
 
 // 非渐变
-materialButtonLog({ logName = 'HELLO WORLD!', type = 'blue', isLinearGradient = false }, data1, data2, ...)
+materialButtonLog({ logName = 'HELLO WORLD!', type = 'blue', isGradient = false }, data1, data2, ...)
 
 // 渐变
-materialButtonLog({ logName = 'HELLO WORLD!', type = 'blue', isLinearGradient = true }, data1, data2, ...)
+materialButtonLog({ logName = 'HELLO WORLD!', type = 'blue', isGradient = true }, data1, data2, ...)
 ```
 
 
@@ -174,3 +174,59 @@ import { buttonLog, styleValue } from 'console-log-button';
 
 buttonLog('me', styleValue.HAMBURGER, anyData); // 第二个按钮的内容是 "🍔"
 ```
+
+# 0.0.4 版本更新内容
+
+## 增加了 .d.ts 类型声明文件
+
+## 解决 log 指向不正确的问题
+
+之前是将 console.log 直接放在本库中，因此查看 log 位置时代码指向了本库而不是使用者的代码，给代码排查造成不便。
+
+button log 本质上就是几个样式字符串，与其让库占据了 console 不如直接只生成这些样式字符串，console 仍然由使用者发起，这样便解决了问题。来看下本次新增内容：
+
+### 新增 buttonLogUtils
+
+作者在这个对象上挂载了一些样式工具函数：
+
+```js
+const buttonLogUtils = {
+  vueDevtool,
+  red,
+  orange,
+  yellow,
+  green,
+  cyan,
+  blue,
+  purple,
+  redLinearGradient,
+  orangeLinearGradient,
+  yellowLinearGradient,
+  greenLinearGradient,
+  cyanLinearGradient,
+  blueLinearGradient,
+  purpleLinearGradient
+};
+```
+
+这些 API 都不会直接 log，只会生成最后的样式字符串。使用方式：
+
+```js
+console.log(...buttonLogUtils.vueDevtool('button-log', '测试'), 1234) // vueDevtool 接受两个参数，一个 logBy，一个 logName
+console.log(...buttonLogUtils.blue('data'))
+```
+
+本质上返回一个数组，产物形如：
+
+```js
+['%c', 'background: #2196f3; padding: 6px 12px; border-radius: 2px; font-size: 14px; color: #fff; font-weight: 600;']
+```
+
+将其展开并作为 console.log 的入参即可，后面加入你自己要打印的参数。
+
+### 新增 getDoubleButtonConfigs 与 getMaterialConfigs
+
+getDoubleButtonConfigs：针对双 button 产出样式配置，可配合 `styleValue` 配置两个 button 的背景色
+
+getMaterialConfigs：针对 material 风格产出配置，目前仅支持产出库默认提供的配色，不支持传入自定义颜色
+

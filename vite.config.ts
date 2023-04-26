@@ -25,7 +25,6 @@ export default defineConfig({
     },
     lib: {
       entry: './index.ts',
-      formats: ['es', 'cjs'],
     }
   },
 });

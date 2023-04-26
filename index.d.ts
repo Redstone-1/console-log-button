@@ -1,4 +1,4 @@
-interface IButtonLogConfig {
+export interface IButtonLogConfig {
   logBy?: string;
   logName?: string;
   preButtonColor?: string;
@@ -7,7 +7,8 @@ interface IButtonLogConfig {
   borderRadius?: number;
   fontColor?: string;
 }
-interface IButtonLogClass {
+
+export interface IButtonLogClass {
   logBy: string;
   logName: string;
   preButtonColor: string;
@@ -16,28 +17,22 @@ interface IButtonLogClass {
   borderRadius: number;
   fontColor: string;
   logTemplate?: (logBy: string, logName: string) => string;
+  firstButtonStyle: string;
+  secondButtonStyle: string;
 }
-interface IMaterialLogConfig {
+
+export type TMaterialLog = 'yellow' | 'orange' | 'red' | 'green' | 'cyan' | 'blue' | 'purple';
+
+export interface IMaterialLogConfig {
   logName: string;
-  type?: 'yellow' | 'orange' | 'red' | 'green' | 'cyan' | 'blue' | 'purple';
-  isLinearGradient?: boolean;
+  type?: TMaterialLog;
+  isGradient?: boolean;
 }
-/**
-* 基础 log 方法
-* @param {string} logBy log 第一个按钮中的文字内容
-* @param {string} logName log 第二个按钮中的文字内容
-* @param {any} data 这里的 data 可以传多个 以 rest 参数形式会被展开
-*/
-export declare const buttonLog: (logBy?: string, logName?: string, ...logData: any[]) => void;
-/**
-* material ui 风格 log 方法
-* @param {object} config log 配置
-* - config.logName - log 按钮中的文字内容
-* - config.type - 'yellow' | 'orange' | 'red' | 'green' | 'cyan' | 'blue' | 'purple'
-* - config.isLinearGradient 是否是渐变按钮
-* @param {any} data 这里的 data 可以传多个 以 rest 参数形式会被展开
-*/
-export declare const materialButtonLog: ({ logName, type, isLinearGradient }: IMaterialLogConfig, ...data: any[]) => void;
+
+export declare const buttonLog: (logBy?: string, logName?: string, ...logData: unknown[]) => void;
+
+export declare const materialButtonLog: ({ logName, type, isGradient }: IMaterialLogConfig, ...data: unknown[]) => void;
+
 export default class ButtonLogClass implements IButtonLogClass {
   logBy: string;
   logName: string;
@@ -47,7 +42,27 @@ export default class ButtonLogClass implements IButtonLogClass {
   borderRadius: number;
   fontColor: string;
   logTemplate: (logBy?: string, logName?: string) => string;
+  firstButtonStyle: string;
+  secondButtonStyle: string;
   constructor(config: IButtonLogConfig);
-  log: (...data: any[]) => void;
+  log: (...data: unknown[]) => void;
 }
-export {};
+
+export declare const vueDevtool: (logBy: string, logName: string) => unknown[];
+export declare const red: (logName: string) => unknown[];
+export declare const orange: (logName: string) => unknown[];
+export declare const yellow: (logName: string) => unknown[];
+export declare const green: (logName: string) => unknown[];
+export declare const cyan: (logName: string) => unknown[];
+export declare const blue: (logName: string) => unknown[];
+export declare const purple: (logName: string) => unknown[];
+export declare const redLinearGradient: (logName: string) => unknown[];
+export declare const orangeLinearGradient: (logName: string) => unknown[];
+export declare const yellowLinearGradient: (logName: string) => unknown[];
+export declare const greenLinearGradient: (logName: string) => unknown[];
+export declare const cyanLinearGradient: (logName: string) => unknown[];
+export declare const blueLinearGradient: (logName: string) => unknown[];
+export declare const purpleLinearGradient: (logName: string) => unknown[];
+
+export declare const getDoubleButtonConfigs: (logBy: string, logName: string, preButtonColor: string, nextButtonColor: string, ...logData: unknown[]) => unknown[];
+export declare const getMaterialConfigs: (isGradient: boolean, logName: string, type: TMaterialLog, ...data: unknown[]) => unknown[];
