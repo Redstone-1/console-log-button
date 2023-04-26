@@ -48,21 +48,23 @@ export default class ButtonLogClass implements IButtonLogClass {
   log: (...data: unknown[]) => void;
 }
 
-export declare const vueDevtool: (logBy: string, logName: string) => unknown[];
-export declare const red: (logName: string) => unknown[];
-export declare const orange: (logName: string) => unknown[];
-export declare const yellow: (logName: string) => unknown[];
-export declare const green: (logName: string) => unknown[];
-export declare const cyan: (logName: string) => unknown[];
-export declare const blue: (logName: string) => unknown[];
-export declare const purple: (logName: string) => unknown[];
-export declare const redLinearGradient: (logName: string) => unknown[];
-export declare const orangeLinearGradient: (logName: string) => unknown[];
-export declare const yellowLinearGradient: (logName: string) => unknown[];
-export declare const greenLinearGradient: (logName: string) => unknown[];
-export declare const cyanLinearGradient: (logName: string) => unknown[];
-export declare const blueLinearGradient: (logName: string) => unknown[];
-export declare const purpleLinearGradient: (logName: string) => unknown[];
+export declare const buttonLogUtils: {
+  vueDevtool: (logBy: string, logName: string) => unknown[];
+  red: (logName: string) => unknown[];
+  orange: (logName: string) => unknown[];
+  yellow: (logName: string) => unknown[];
+  green: (logName: string) => unknown[];
+  cyan: (logName: string) => unknown[];
+  blue: (logName: string) => unknown[];
+  purple: (logName: string) => unknown[];
+  redLinearGradient: (logName: string) => unknown[];
+  orangeLinearGradient: (logName: string) => unknown[];
+  yellowLinearGradient: (logName: string) => unknown[];
+  greenLinearGradient: (logName: string) => unknown[];
+  cyanLinearGradient: (logName: string) => unknown[];
+  blueLinearGradient: (logName: string) => unknown[];
+  purpleLinearGradient: (logName: string) => unknown[];
+};
 
 export declare const getDoubleButtonConfigs: (logBy: string, logName: string, preButtonColor: string, nextButtonColor: string, ...logData: unknown[]) => unknown[];
 export declare const getMaterialConfigs: (isGradient: boolean, logName: string, type: TMaterialLog, ...data: unknown[]) => unknown[];

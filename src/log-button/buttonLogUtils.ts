@@ -18,3 +18,21 @@ export const greenLinearGradient = (logName: string) => getMaterialConfigs(true,
 export const cyanLinearGradient = (logName: string) => getMaterialConfigs(true, logName, 'cyan');
 export const blueLinearGradient = (logName: string) => getMaterialConfigs(true, logName, 'blue');
 export const purpleLinearGradient = (logName: string) => getMaterialConfigs(true, logName, 'purple');
+
+export const buttonLogUtils = {
+  vueDevtool,
+  red,
+  orange,
+  yellow,
+  green,
+  cyan,
+  blue,
+  purple,
+  redLinearGradient,
+  orangeLinearGradient,
+  yellowLinearGradient,
+  greenLinearGradient,
+  cyanLinearGradient,
+  blueLinearGradient,
+  purpleLinearGradient
+};
