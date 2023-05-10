@@ -5,15 +5,19 @@
   "type": "module",
   "main": "lib/index.js",
   "module": "es/index.js",
+  "types": "index.d.ts",
+  "homepage": "https://www.npmjs.com/package/console-log-button",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext '.js,.ts' --fix",
     "precommit": "lint-staged",
-    "publish": "yarn build && npm publish",
-    "release": "bumpp && yarn run publish"
+    "release": "bumpp && yarn build && yarn run publish"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.56.0",
     "bumpp": "^9.1.0",
@@ -47,13 +51,10 @@
     "log",
     "button"
   ],
-  "types": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/Redstone-1/console-log-button"
   },
-  "homepage": "https://www.npmjs.com/package/console-log-button",
-  "license": "MIT",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   }
