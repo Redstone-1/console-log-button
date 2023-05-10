@@ -1,7 +1,7 @@
 {
   "name": "console-log-button",
   "private": false,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -13,7 +13,7 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext '.js,.ts' --fix",
     "precommit": "lint-staged",
-    "release": "bumpp && yarn build && yarn run publish"
+    "release": "yarn build && bumpp && yarn run publish"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",
