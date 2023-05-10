@@ -170,9 +170,10 @@ export const CHEERS = "🍻";
 ## 使用方法
 
 ```js
-import { buttonLog, styleValue } from 'console-log-button';
+import { buttonLog, styleValue, emoji } from 'console-log-button';
 
-buttonLog('me', styleValue.HAMBURGER, anyData); // 第二个按钮的内容是 "🍔"
+buttonLog('me', styleValue.VUE_DEEP_CYAN, anyData);
+buttonLog('me', emoji.HAMBURGER, anyData);
 ```
 
 # 0.0.4 版本更新内容
@@ -229,4 +230,3 @@ console.log(...buttonLogUtils.blue('data'))
 getDoubleButtonConfigs：针对双 button 产出样式配置，可配合 `styleValue` 配置两个 button 的背景色
 
 getMaterialConfigs：针对 material 风格产出配置，目前仅支持产出库默认提供的配色，不支持传入自定义颜色
-
