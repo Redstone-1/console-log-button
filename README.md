@@ -260,7 +260,7 @@ export declare const getMaterialConfigs: (isGradient: boolean, logName: string, 
 | 参数名 | 描述 | 类型 | 默认值 | 版本要求
 | --- | --- | --- | --- | --- |
 | buttonLog | 双 button log | function | null |
-| materialButtonLog | 单 button log 的 material 风格 | string | null |
+| materialButtonLog | 单 button log 的 material 风格 | function | null |
 | buttonLogUtils | buttonLog、materialButtonLog 的简化版，仅生成样式参数 | object | null | `>=0.0.4`
 | getDoubleButtonConfigs | 生成双 button 样式参数，可配合 styleValue 使用 | function | null | `>=0.0.4`
 | getMaterialConfigs | 生成 material 风格样式参数 | function | null | `>=0.0.4`
