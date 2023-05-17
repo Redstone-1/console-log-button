@@ -56,7 +56,7 @@ materialButtonLog({ logName = 'HELLO WORLD!', type = 'blue', isGradient = true }
 ```
 
 
-# 内置的一些emoji字符及颜色
+# 内置 styleValue
 
 ```js
 // vue-devtool
@@ -122,7 +122,19 @@ export const MATERIAL_DARK_LIGHT_BLUE = "#01579b";
 export const MATERIAL_DARK_LIGHT_GREEN = "#33691e";
 export const MATERIAL_DARK_LIGHT_PINK = "#ad1457";
 export const MATERIAL_DARK_LIGHT_PURPLE = "#6a1b9a";
+```
 
+## 使用方法
+
+```js
+import { buttonLog, styleValue } from 'console-log-button';
+
+buttonLog('me', styleValue.VUE_DEEP_CYAN, anyData);
+```
+
+# 内置 emoji 
+
+```js
 // emoji
 export const BIG_CRY = "😭";
 export const ZI_BI = "🤐";
@@ -170,29 +182,34 @@ export const CHEERS = "🍻";
 ## 使用方法
 
 ```js
-import { buttonLog, styleValue, emoji } from 'console-log-button';
+import { buttonLog, emoji } from 'console-log-button';
 
-buttonLog('me', styleValue.VUE_DEEP_CYAN, anyData);
 buttonLog('me', emoji.HAMBURGER, anyData);
 ```
+# buttonLogUtils
 
-# 0.0.4 版本更新内容
+之前的方法在 0.0.4 之前都有点问题。
 
-## 增加了 .d.ts 类型声明文件
+- 一是没有良好的类型提示
+- 二是 console 由库直接调用，在源码调试时直接定位到了库的内部
 
-## 解决 log 指向不正确的问题
+因此需要将 console 交给使用者调用，库只生成最后的样式参数。
 
-之前是将 console.log 直接放在本库中，因此查看 log 位置时代码指向了本库而不是使用者的代码，给代码排查造成不便。
+我们希望使用者这么调用：
 
-button log 本质上就是几个样式字符串，与其让库占据了 console 不如直接只生成这些样式字符串，console 仍然由使用者发起，这样便解决了问题。来看下本次新增内容：
+```js
+console.log(...buttonLogUtils.vueDevtool('button-log', '测试'), 1234) // vueDevtool 接受两个参数，一个 logBy，一个 logName
+console.log(...buttonLogUtils.blue('data'))
+```
 
-### 新增 buttonLogUtils
-
-作者在这个对象上挂载了一些样式工具函数：
+buttonLogUtils 上挂载的方法：
 
 ```js
 const buttonLogUtils = {
-  vueDevtool,
+  // 双 button，vueDevtool 风格
+  vueDevtool, 
+
+  // 单 button，material ui 风格
   red,
   orange,
   yellow,
@@ -210,14 +227,7 @@ const buttonLogUtils = {
 };
 ```
 
-这些 API 都不会直接 log，只会生成最后的样式字符串。使用方式：
-
-```js
-console.log(...buttonLogUtils.vueDevtool('button-log', '测试'), 1234) // vueDevtool 接受两个参数，一个 logBy，一个 logName
-console.log(...buttonLogUtils.blue('data'))
-```
-
-本质上返回一个数组，产物形如：
+这些 API 都不会直接 log，只会生成最后的样式字符串。本质上返回一个数组，产物形如：
 
 ```js
 ['%c', 'background: #2196f3; padding: 6px 12px; border-radius: 2px; font-size: 14px; color: #fff; font-weight: 600;']
@@ -225,8 +235,34 @@ console.log(...buttonLogUtils.blue('data'))
 
 将其展开并作为 console.log 的入参即可，后面加入你自己要打印的参数。
 
-### 新增 getDoubleButtonConfigs 与 getMaterialConfigs
+# getDoubleButtonConfigs 与 getMaterialConfigs
 
-getDoubleButtonConfigs：针对双 button 产出样式配置，可配合 `styleValue` 配置两个 button 的背景色
+如果觉得调用之前的 API 都比较麻烦，这里暴露了两个内部 API，同样是生成样式参数。
 
-getMaterialConfigs：针对 material 风格产出配置，目前仅支持产出库默认提供的配色，不支持传入自定义颜色
+## getDoubleButtonConfigs
+
+针对双 button 产出样式配置，可配合 `styleValue` 配置两个 button 的背景色
+
+```ts
+export declare const getDoubleButtonConfigs: (logBy: string, logName: string, preButtonColor: string, nextButtonColor: string, ...logData: unknown[]) => unknown[];
+```
+
+## getMaterialConfigs
+
+针对 material 风格产出配置，目前仅支持产出库默认提供的配色，不支持传入自定义颜色
+
+```ts
+export declare const getMaterialConfigs: (isGradient: boolean, logName: string, type: TMaterialLog, ...data: unknown[]) => unknown[];
+```
+
+# API
+
+| 参数名 | 描述 | 类型 | 默认值 | 版本要求
+| --- | --- | --- | --- | --- |
+| buttonLog | 双 button log | function | null |
+| materialButtonLog | 单 button log 的 material 风格 | string | null |
+| buttonLogUtils | buttonLog、materialButtonLog 的简化版，仅生成样式参数 | object | null | `>=0.0.4`
+| getDoubleButtonConfigs | 生成双 button 样式参数，可配合 styleValue 使用 | function | null | `>=0.0.4`
+| getMaterialConfigs | 生成 material 风格样式参数 | function | null | `>=0.0.4`
+| styleValue | 内置样式变量 | enum | null |
+| emoji | 内置 emoji，0.0.6 之前绑定在 styleValue 上 | enum | null | `>=0.0.6`
