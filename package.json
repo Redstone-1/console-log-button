@@ -13,7 +13,8 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext '.js,.ts' --fix",
     "precommit": "lint-staged",
-    "release": "yarn build && bumpp && yarn run publish"
+    "changelog": "conventional-changelog -p -i CHANGELOG.md -s",
+    "release": "yarn changelog && yarn build && bumpp && yarn run publish"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",
@@ -21,6 +22,7 @@
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.56.0",
     "bumpp": "^9.1.0",
+    "conventional-changelog-cli": "^2.2.2",
     "eslint": "^8.36.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
