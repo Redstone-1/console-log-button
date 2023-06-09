@@ -12,7 +12,10 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext '.js,.ts' --fix",
+    "prepare": "husky install",
     "precommit": "lint-staged",
+    "commit": "git-cz",
+    "version": "bumpp",
     "changelog": "conventional-changelog -p -i CHANGELOG.md -s",
     "release": "yarn changelog && yarn build && bumpp && yarn run publish"
   },
@@ -22,6 +25,7 @@
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.56.0",
     "bumpp": "^9.1.0",
+    "commitizen": "^4.3.0",
     "conventional-changelog-cli": "^2.2.2",
     "eslint": "^8.36.0",
     "husky": "^8.0.3",
@@ -35,11 +39,12 @@
     "es",
     "README",
     "LICENSE",
+    "CHANGELOG",
     "index.d.ts"
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
   },
   "lint-staged": {
