@@ -1,10 +1,8 @@
 {
   "name": "console-log-button",
   "private": false,
-  "version": "0.0.6",
-  "type": "module",
-  "main": "lib/index.js",
-  "module": "es/index.js",
+  "version": "0.0.7",
+  "browser": "es/index.js",
   "types": "index.d.ts",
   "homepage": "https://www.npmjs.com/package/console-log-button",
   "license": "MIT",
@@ -17,7 +15,7 @@
     "commit": "git-cz",
     "version": "bumpp",
     "changelog": "conventional-changelog -p -i CHANGELOG.md -s",
-    "release": "yarn changelog && yarn build && bumpp && yarn run publish"
+    "release": "yarn version && yarn build && yarn changelog"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",
@@ -35,7 +33,6 @@
     "vitest": "^0.31.0"
   },
   "files": [
-    "lib",
     "es",
     "README",
     "LICENSE",
@@ -54,9 +51,9 @@
     ]
   },
   "keywords": [
-    "console",
-    "log",
-    "button"
+    "console style",
+    "browser console",
+    "button style console"
   ],
   "repository": {
     "type": "git",
