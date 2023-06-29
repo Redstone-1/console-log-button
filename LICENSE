@@ -1,21 +1,40 @@
-MIT License
+开源协议
 
-Copyright (c) 2023 [xiwenge](https://www.npmjs.com/~xiwenge)
+Copyright (c) 2023 @[xiwenge](https://www.npmjs.com/~xiwenge)
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+获得本源码意味着你已经看到此开源协议，并视为你已阅读且同意以下条款
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. 本代码完全开源免费，但不排除未来收费的可能
+2. 本代码允许你自用、商用，但你使用后带来的后果与责任由你自己承担
+3. 本代码允许你在公开渠道分享未修改过的本代码或代码片段，但需标注本代码的原始仓库
+4. 你可以使用、修改本代码，并将你使用、修改后的代码闭源或开源，这取决于你，同时产生的后果由你自己承担
+5. 如果你修改本代码，并将其以任意形式发布在任意媒体上，必须在源码或者公开渠道上标注对本代码的借鉴或引用
+6. 你不可以复制或者搬运本代码进入你的公开代码仓库或者公开媒体上，对外宣称或让浏览者误以为这是你的原创代码，否则将被视为侵权
+7. 本代码尽可能保证代码没有bug，但不对此做百分百保证
+8. 本代码也拥有绝对的自主决定权，包括停更、废弃等，不对任何人负责，也不从任何人的使用中获得收益
+9. 你利用本代码产生的任何衍生产品必须包含本声明
+10. 不得使用本代码作者的名字为衍生产品促销
+11. 违反本协议条款意味着你的许可被终止，你不再具备使用本代码的权利
+12. 你应当谨慎地使用本代码，其它本协议之外的争议将保留使用法律解决的权利
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+------------------------------------------------------------
+
+Open-source License
+
+Copyright (c) 2023 @[xiwenge](https://www.npmjs.com/~xiwenge)
+
+By obtaining this source code, you have seen this open Source Agreement and are deemed to have read and agreed to the following terms
+
+1. This code is completely open source and free, but does not rule out the possibility of future charges.
+2. This code allows you to use for yourself and commercially, but the consequences and responsibilities brought by your use are borne by you.
+3. This code allows you to share unmodified versions of this code or snippets in public channels, provided that the original repository of this code is marked.
+4. You can use and modify this code, and the code you use and modify is closed source or open source, which is up to you, and the consequences are borne by you.
+5. If you modify this code and publish it in any form on any media, references or references to this code must be marked in the source code or in public channels.
+6. You may not copy or transfer this code into your public code warehouse or public media, declare or let the viewer mistakenly think that this is your original code, otherwise it will be considered infringement.
+7. This code as far as possible to ensure that there are no bugs in the code, but it does not make a hundred percent guarantee.
+8. This code also has absolute autonomy, including stopping, abandonment, etc., and is not responsible for anyone, nor does it benefit from anyone's use.
+9. Any derivative products you create using this code must include this license.
+10. You may not use the name of the author of this code to promote derivative products.
+11. Violation of the terms of this Agreement means that your license is terminated and you no longer have the right to use this code.
+12. You should use this code with caution, and any disputes outside this Agreement are reserved for legal settlement.
+
