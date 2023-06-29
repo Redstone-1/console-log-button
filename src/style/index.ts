@@ -1,16 +1,22 @@
-// vue-devtool
+// vue devtool
 export const VUE_DEEP_CYAN = "#41b883";
 export const VUE_BLUE_GRAY = "#35495e";
 
-// arco-design
-export const ARCO_DEEP_BLUE = "#1f5bfb";
-export const ARCO_DEEP_ORANGE = "#fe9c3e";
-export const ARCO_DEEP_RED = "#f66965";
-export const ARCO_DEEP_GREEN = "#27c24a";
-export const ARCO_LIGHT_BLUE = "#96bdfd";
-export const ARCO_LIGHT_ORANGE = "#fff7e8";
-export const ARCO_LIGHT_RED = "#ffece9";
-export const ARCO_LIGHT_GREEN = "#e8ffeb";
+// arco design
+export const ARCO_DEEP_RED = "#F53F3F";
+export const ARCO_LIGHT_RED = "#F76560";
+export const ARCO_DEEP_ORANGE = "#FF7D00";
+export const ARCO_LIGHT_ORANGE = "#F77234";
+export const ARCO_DEEP_YELLOW = "#F7BA1E";
+export const ARCO_LIGHT_YELLOW = "#FADC19";
+export const ARCO_DEEP_GREEN = "#00B42A";
+export const ARCO_LIGHT_GREEN = "#9FDB1D";
+export const ARCO_DEEP_CYAN = "#14C9C9";
+export const ARCO_LIGHT_CYAN = "#37D4CF";
+export const ARCO_DEEP_BLUE = "#165DFF";
+export const ARCO_LIGHT_BLUE = "#3491FA";
+export const ARCO_DEEP_PURPLE = "#722ED1";
+export const ARCO_LIGHT_PURPLE = "#8D4EDA";
 
 // material ui
 export const MATERIAL_BLUE = "#2196f3";

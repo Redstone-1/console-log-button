@@ -38,3 +38,12 @@ export const getMaterialConfigs = (isGradient: boolean, logName: string, type: T
   ];
   return configs;
 };
+
+export const getMaterialGhostConfigs = (logName: string, type: TMaterialLog, ...data: unknown[]): unknown[] => {
+  const configs = [
+    `%c ${logName} `,
+    `border: 2px solid ${colorMap.get(type)}; padding: 6px 12px; border-radius: 6px; font-size: 14px; color: ${colorMap.get(type)}; font-weight: 600;`,
+    ...data,
+  ];
+  return configs;
+};

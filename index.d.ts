@@ -50,6 +50,14 @@ export default class ButtonLogClass implements IButtonLogClass {
 
 export declare const buttonLogUtils: {
   vueDevtool: (logBy: string, logName: string) => unknown[];
+  arcoRedOrange: (logBy: string, logName: string) => unknown[];
+  arcoRedLightOrangeLight: (logBy: string, logName: string) => unknown[];
+  arcoBluePurple: (logBy: string, logName: string) => unknown[];
+  arcoBlueLightPurpleLight: (logBy: string, logName: string) => unknown[];
+  arcoYellowGreen: (logBy: string, logName: string) => unknown[];
+  arcoYellowLightGreenLight: (logBy: string, logName: string) => unknown[];
+  arcoCyanOrange: (logBy: string, logName: string) => unknown[];
+  arcoCyanLightOrangeLight: (logBy: string, logName: string) => unknown[];
   red: (logName: string) => unknown[];
   orange: (logName: string) => unknown[];
   yellow: (logName: string) => unknown[];
@@ -57,6 +65,13 @@ export declare const buttonLogUtils: {
   cyan: (logName: string) => unknown[];
   blue: (logName: string) => unknown[];
   purple: (logName: string) => unknown[];
+  redGhost: (logName: string) => unknown[];
+  orangeGhost: (logName: string) => unknown[];
+  yellowGhost: (logName: string) => unknown[];
+  greenGhost: (logName: string) => unknown[];
+  cyanGhost: (logName: string) => unknown[];
+  blueGhost: (logName: string) => unknown[];
+  purpleGhost: (logName: string) => unknown[];
   redLinearGradient: (logName: string) => unknown[];
   orangeLinearGradient: (logName: string) => unknown[];
   yellowLinearGradient: (logName: string) => unknown[];
@@ -66,5 +81,7 @@ export declare const buttonLogUtils: {
   purpleLinearGradient: (logName: string) => unknown[];
 };
 
+
 export declare const getDoubleButtonConfigs: (logBy: string, logName: string, preButtonColor: string, nextButtonColor: string, ...logData: unknown[]) => unknown[];
 export declare const getMaterialConfigs: (isGradient: boolean, logName: string, type: TMaterialLog, ...data: unknown[]) => unknown[];
+export declare const getMaterialGhostConfigs: (logName: string, type: TMaterialLog, ...data: unknown[]) => unknown[];
