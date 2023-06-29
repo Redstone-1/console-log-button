@@ -1,11 +1,12 @@
 {
   "name": "console-log-button",
   "private": false,
-  "version": "0.0.7",
+  "version": "0.0.8",
   "browser": "es/index.js",
   "types": "index.d.ts",
+  "license": "请查阅 LICENSE",
+  "author": "xiwenge",
   "homepage": "https://www.npmjs.com/package/console-log-button",
-  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -14,7 +15,7 @@
     "precommit": "lint-staged",
     "commit": "git-cz",
     "version": "bumpp",
-    "changelog": "conventional-changelog -p -i CHANGELOG.md -s",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "release": "yarn version && yarn build && yarn changelog"
   },
   "devDependencies": {

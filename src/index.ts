@@ -4,6 +4,7 @@ import ButtonLogClass, {
   buttonLogUtils,
   getDoubleButtonConfigs,
   getMaterialConfigs,
+  getMaterialGhostConfigs
 } from './button-log';
 import * as styleValue from './style';
 import {
@@ -13,10 +14,11 @@ import {
 export {
   buttonLog,
   materialButtonLog,
-  
+
   buttonLogUtils,
   getDoubleButtonConfigs,
   getMaterialConfigs,
+  getMaterialGhostConfigs,
 
   styleValue,
   emoji,

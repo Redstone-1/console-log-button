@@ -1,4 +1,4 @@
-# 基本用法
+# 一、基本用法
 
 ```js
 import { buttonLog } from 'console-log-button';
@@ -12,7 +12,7 @@ import { buttonLog } from 'console-log-button';
 buttonLog('me', 'data', data1, data2, data3, ...)
 ```
 
-# 进阶配置化用法
+# 二、进阶配置化用法
 
 ```js
 import ButtonLogClass from 'console-log-button';
@@ -34,7 +34,7 @@ const buttonLog = new ButtonLogClass({
 buttonLog.log(data)
 ```
 
-# material ui 风格
+# 三、material ui 风格
 
 ```js
 import { materialButtonLog } from 'console-log-button';
@@ -56,22 +56,28 @@ materialButtonLog({ logName = 'HELLO WORLD!', type = 'blue', isGradient = true }
 ```
 
 
-# 内置 styleValue
+# 四、内置 styleValue
 
 ```js
-// vue-devtool
+// vue devtool
 export const VUE_DEEP_CYAN = "#41b883";
 export const VUE_BLUE_GRAY = "#35495e";
 
-// arco-design
-export const ARCO_DEEP_BLUE = "#1f5bfb";
-export const ARCO_DEEP_ORANGE = "#fe9c3e";
-export const ARCO_DEEP_RED = "#f66965";
-export const ARCO_DEEP_GREEN = "#27c24a";
-export const ARCO_LIGHT_BLUE = "#96bdfd";
-export const ARCO_LIGHT_ORANGE = "#fff7e8";
-export const ARCO_LIGHT_RED = "#ffece9";
-export const ARCO_LIGHT_GREEN = "#e8ffeb";
+// arco design
+export const ARCO_DEEP_RED = "#F53F3F";
+export const ARCO_LIGHT_RED = "#F76560";
+export const ARCO_DEEP_ORANGE = "#FF7D00";
+export const ARCO_LIGHT_ORANGE = "#F77234";
+export const ARCO_DEEP_YELLOW = "#F7BA1E";
+export const ARCO_LIGHT_YELLOW = "#FADC19";
+export const ARCO_DEEP_GREEN = "#00B42A";
+export const ARCO_LIGHT_GREEN = "#9FDB1D";
+export const ARCO_DEEP_CYAN = "#14C9C9";
+export const ARCO_LIGHT_CYAN = "#37D4CF";
+export const ARCO_DEEP_BLUE = "#165DFF";
+export const ARCO_LIGHT_BLUE = "#3491FA";
+export const ARCO_DEEP_PURPLE = "#722ED1";
+export const ARCO_LIGHT_PURPLE = "#8D4EDA";
 
 // material ui
 export const MATERIAL_BLUE = "#2196f3";
@@ -122,6 +128,7 @@ export const MATERIAL_DARK_LIGHT_BLUE = "#01579b";
 export const MATERIAL_DARK_LIGHT_GREEN = "#33691e";
 export const MATERIAL_DARK_LIGHT_PINK = "#ad1457";
 export const MATERIAL_DARK_LIGHT_PURPLE = "#6a1b9a";
+
 ```
 
 ## 使用方法
@@ -132,7 +139,9 @@ import { buttonLog, styleValue } from 'console-log-button';
 buttonLog('me', styleValue.VUE_DEEP_CYAN, anyData);
 ```
 
-# 内置 emoji 
+# 五、内置 emoji
+
+> 0.0.4 新增，将 emoji 从 styleValue 上剥离出来独立
 
 ```js
 // emoji
@@ -186,7 +195,9 @@ import { buttonLog, emoji } from 'console-log-button';
 
 buttonLog('me', emoji.HAMBURGER, anyData);
 ```
-# buttonLogUtils
+# 六、buttonLogUtils
+
+> 0.0.4 新增
 
 之前的方法在 0.0.4 之前都有点问题。
 
@@ -205,25 +216,37 @@ console.log(...buttonLogUtils.blue('data'))
 buttonLogUtils 上挂载的方法：
 
 ```js
-const buttonLogUtils = {
-  // 双 button，vueDevtool 风格
-  vueDevtool, 
-
-  // 单 button，material ui 风格
-  red,
-  orange,
-  yellow,
-  green,
-  cyan,
-  blue,
-  purple,
-  redLinearGradient,
-  orangeLinearGradient,
-  yellowLinearGradient,
-  greenLinearGradient,
-  cyanLinearGradient,
-  blueLinearGradient,
-  purpleLinearGradient
+export declare const buttonLogUtils: {
+  vueDevtool: (logBy: string, logName: string) => unknown[];
+  arcoRedOrange: (logBy: string, logName: string) => unknown[]; // 0.0.8 新增
+  arcoRedLightOrangeLight: (logBy: string, logName: string) => unknown[]; // 0.0.8 新增
+  arcoBluePurple: (logBy: string, logName: string) => unknown[]; // 0.0.8 新增
+  arcoBlueLightPurpleLight: (logBy: string, logName: string) => unknown[]; // 0.0.8 新增
+  arcoYellowGreen: (logBy: string, logName: string) => unknown[]; // 0.0.8 新增
+  arcoYellowLightGreenLight: (logBy: string, logName: string) => unknown[]; // 0.0.8 新增
+  arcoCyanOrange: (logBy: string, logName: string) => unknown[]; // 0.0.8 新增
+  arcoCyanLightOrangeLight: (logBy: string, logName: string) => unknown[]; // 0.0.8 新增
+  red: (logName: string) => unknown[];
+  orange: (logName: string) => unknown[];
+  yellow: (logName: string) => unknown[];
+  green: (logName: string) => unknown[];
+  cyan: (logName: string) => unknown[];
+  blue: (logName: string) => unknown[];
+  purple: (logName: string) => unknown[];
+  redGhost: (logName: string) => unknown[]; // 0.0.8 新增
+  orangeGhost: (logName: string) => unknown[]; // 0.0.8 新增
+  yellowGhost: (logName: string) => unknown[]; // 0.0.8 新增
+  greenGhost: (logName: string) => unknown[]; // 0.0.8 新增
+  cyanGhost: (logName: string) => unknown[]; // 0.0.8 新增
+  blueGhost: (logName: string) => unknown[]; // 0.0.8 新增
+  purpleGhost: (logName: string) => unknown[]; // 0.0.8 新增
+  redLinearGradient: (logName: string) => unknown[];
+  orangeLinearGradient: (logName: string) => unknown[];
+  yellowLinearGradient: (logName: string) => unknown[];
+  greenLinearGradient: (logName: string) => unknown[];
+  cyanLinearGradient: (logName: string) => unknown[];
+  blueLinearGradient: (logName: string) => unknown[];
+  purpleLinearGradient: (logName: string) => unknown[];
 };
 ```
 
@@ -235,11 +258,15 @@ const buttonLogUtils = {
 
 将其展开并作为 console.log 的入参即可，后面加入你自己要打印的参数。
 
-# getDoubleButtonConfigs 与 getMaterialConfigs
+buttonLogUtils 上目前挂载的方法比较多，如果你嫌笨重，也可以使用下面的 `构建样式参数 API`，这样未使用的 buttonLogUtils 可以 tree-shaking，减少打包体积。不过在 buttonLogUtils 内置了很多好看的配色方法，如果你对配色不是很在行，那么仍然建议你使用它。
 
-如果觉得调用之前的 API 都比较麻烦，这里暴露了两个内部 API，同样是生成样式参数。
+# 七、构建样式参数 API
 
-## getDoubleButtonConfigs
+如果觉得调用之前的 API 都比较麻烦，我们也向外暴露了生成样式参数的 API：
+
+## 1. getDoubleButtonConfigs
+
+> 0.0.4 新增
 
 针对双 button 产出样式配置，可配合 `styleValue` 配置两个 button 的背景色
 
@@ -247,12 +274,32 @@ const buttonLogUtils = {
 export declare const getDoubleButtonConfigs: (logBy: string, logName: string, preButtonColor: string, nextButtonColor: string, ...logData: unknown[]) => unknown[];
 ```
 
-## getMaterialConfigs
+```ts
+import { getDoubleButtonConfigs, styleValue, emoji } from 'console-log-button';
+
+console.log(
+  ...getDoubleButtonConfigs(emoji.XIAO_CHOU, 'window', styleValue.ARCO_DEEP_RED, styleValue.ARCO_DEEP_ORANGE, window)
+)
+```
+
+## 2. getMaterialConfigs
+
+> 0.0.4 新增
 
 针对 material 风格产出配置，目前仅支持产出库默认提供的配色，不支持传入自定义颜色
 
 ```ts
 export declare const getMaterialConfigs: (isGradient: boolean, logName: string, type: TMaterialLog, ...data: unknown[]) => unknown[];
+```
+
+## 3. getMaterialGhostConfigs
+
+> 0.0.8 新增
+
+material 风格的幽灵按钮风格，背景色透明。
+
+```ts
+export declare const getMaterialGhostConfigs: (logName: string, type: TMaterialLog, ...data: unknown[]) => unknown[];
 ```
 
 # API
@@ -263,6 +310,7 @@ export declare const getMaterialConfigs: (isGradient: boolean, logName: string, 
 | materialButtonLog | 单 button log 的 material 风格 | function | null |
 | buttonLogUtils | buttonLog、materialButtonLog 的简化版，仅生成样式参数 | object | null | `>=0.0.4`
 | getDoubleButtonConfigs | 生成双 button 样式参数，可配合 styleValue 使用 | function | null | `>=0.0.4`
-| getMaterialConfigs | 生成 material 风格样式参数 | function | null | `>=0.0.4`
-| styleValue | 内置样式变量 | enum | null |
-| emoji | 内置 emoji，0.0.6 之前绑定在 styleValue 上 | enum | null | `>=0.0.6`
+| getMaterialConfigs | 生成 material button 风格样式参数 | function | null | `>=0.0.4`
+| getMaterialGhostConfigs | 生成 material button 幽灵风格样式参数 | function | null | `>=0.0.8`
+| styleValue | 内置样式变量 | object | null |
+| emoji | 内置 emoji，0.0.6 之前绑定在 styleValue 上 | object | null | `>=0.0.6`
