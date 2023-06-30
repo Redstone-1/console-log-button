@@ -1,4 +1,4 @@
-import * as emoji from './emoji';
+import emoji from './emoji';
 
 export {
   emoji

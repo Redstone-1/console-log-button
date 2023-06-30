@@ -1,42 +1,44 @@
-// emoji
-export const BIG_CRY = "😭";
-export const ZI_BI = "🤐";
-export const SEE_SEXY_GIRL = "😍";
-export const YE_TU_LE = "🤮";
-export const XIAO_NI_MA = "😅";
-export const MANY_BUGS = "😱";
-export const FO_ZU_BAO_YOU = "😇";
-export const MEI_LIAN_JIAN_REN = "🙈";
-export const XIAO_CHOU = "🤡";
-export const SHUT_UP = "🤫";
-export const GUI = "👻";
-export const YI_TUO_SHI = "💩";
-export const MEI_NAO_ZI = "🧠";
-export const DAO_LE_CHAN_PIN = "🔪";
-export const SONG_NI_SHANG_XI_TIAN = "🚀";
-export const CHI_YAO_LE_DA_LANG = "💊";
-export const SHANG_XIAN_LE = "🎉";
-export const BLACK_FACE = "🌚";
-export const YE_ZI_SHU = "🌴";
-export const SONG_SHU = "🌲";
-export const XIAN_REN_ZHANG = "🌵";
-export const JU_GE_LI_ZI = "🌰";
-export const DIAN_ZAN = "👍";
-export const ZERO_BUG = "🙏";
-export const OK = "👌";
-export const CALL_ME_TONIGHT = "🤙";
-export const FINGER_RIGHT = "👉";
-export const FINGER_LEFT = "👈";
-export const FINGER_UP = "👆";
-export const FINGER_DOWN = "👇";
-export const HE_ZUO_YU_KUAI = "🤝";
-export const PEI_ZHONG_DA_FEI_ZHU = "🐷";
-export const NEW_BEE = "🐝";
-export const WANG_WANG_DUI = "🐶";
-export const NIU = "🐮";
-export const KUN = "🐔";
-export const WATERMELON = "🍉";
-export const GREEN_TEA = "🍵";
-export const APPLE = "🍎";
-export const HAMBURGER = "🍔";
-export const CHEERS = "🍻";
+export default {
+  // emoji
+  BIG_CRY: "😭",
+  ZI_BI: "🤐",
+  SEE_SEXY_GIRL: "😍",
+  YE_TU_LE: "🤮",
+  XIAO_NI_MA: "😅",
+  MANY_BUGS: "😱",
+  FO_ZU_BAO_YOU: "😇",
+  MEI_LIAN_JIAN_REN: "🙈",
+  XIAO_CHOU: "🤡",
+  SHUT_UP: "🤫",
+  GUI: "👻",
+  YI_TUO_SHI: "💩",
+  MEI_NAO_ZI: "🧠",
+  DAO_LE_CHAN_PIN: "🔪",
+  SONG_NI_SHANG_XI_TIAN: "🚀",
+  CHI_YAO_LE_DA_LANG: "💊",
+  SHANG_XIAN_LE: "🎉",
+  BLACK_FACE: "🌚",
+  YE_ZI_SHU: "🌴",
+  SONG_SHU: "🌲",
+  XIAN_REN_ZHANG: "🌵",
+  JU_GE_LI_ZI: "🌰",
+  DIAN_ZAN: "👍",
+  ZERO_BUG: "🙏",
+  OK: "👌",
+  CALL_ME_TONIGHT: "🤙",
+  FINGER_RIGHT: "👉",
+  FINGER_LEFT: "👈",
+  FINGER_UP: "👆",
+  FINGER_DOWN: "👇",
+  HE_ZUO_YU_KUAI: "🤝",
+  PEI_ZHONG_DA_FEI_ZHU: "🐷",
+  NEW_BEE: "🐝",
+  WANG_WANG_DUI: "🐶",
+  NIU: "🐮",
+  KUN: "🐔",
+  WATERMELON: "🍉",
+  GREEN_TEA: "🍵",
+  APPLE: "🍎",
+  HAMBURGER: "🍔",
+  CHEERS: "🍻",
+};

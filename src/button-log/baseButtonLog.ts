@@ -1,6 +1,6 @@
 import { IButtonLogClass, IButtonLogConfig, IMaterialLogConfig } from './types';
 import { getDoubleButtonConfigs, getMaterialConfigs } from './common';
-import { VUE_DEEP_CYAN, VUE_BLUE_GRAY } from '../style';
+import styleValue from '../style';
 
 /**
  * 基础 log 方法
@@ -9,7 +9,7 @@ import { VUE_DEEP_CYAN, VUE_BLUE_GRAY } from '../style';
  * @param {any} data 这里的 data 可以传多个 以 rest 参数形式会被展开
  */
 export const buttonLog = (logBy = '', logName = '', ...logData: unknown[]) => console.log(
-  ...getDoubleButtonConfigs(logBy, logName, VUE_DEEP_CYAN, VUE_BLUE_GRAY, ...logData)
+  ...getDoubleButtonConfigs(logBy, logName, styleValue.VUE_DEEP_CYAN, styleValue.VUE_BLUE_GRAY, ...logData)
 );
 
 /**
@@ -35,12 +35,12 @@ export default class ButtonLogClass implements IButtonLogClass {
   logTemplate = (logBy = '', logName = '') => `%c log-by-${logBy} %c ${logName} `;
   firstButtonStyle;
   secondButtonStyle;
-  
+
   constructor(config: IButtonLogConfig) {
     this.logBy = config.logBy || '';
     this.logName = config.logName || '';
-    this.preButtonColor = config.preButtonColor || VUE_DEEP_CYAN;
-    this.nextButtonColor = config.nextButtonColor || VUE_BLUE_GRAY;
+    this.preButtonColor = config.preButtonColor || styleValue.VUE_DEEP_CYAN;
+    this.nextButtonColor = config.nextButtonColor || styleValue.VUE_BLUE_GRAY;
     this.padding = config.padding || 6;
     this.borderRadius = config.borderRadius || 1;
     this.fontColor = config.fontColor || '#fff';
