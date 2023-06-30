@@ -1,36 +1,18 @@
 import { getDoubleButtonConfigs, getMaterialConfigs, getMaterialGhostConfigs } from './common';
-import {
-  VUE_DEEP_CYAN,
-  VUE_BLUE_GRAY,
-
-  ARCO_DEEP_RED,
-  ARCO_LIGHT_RED,
-  ARCO_DEEP_ORANGE,
-  ARCO_LIGHT_ORANGE,
-  ARCO_DEEP_YELLOW,
-  ARCO_LIGHT_YELLOW,
-  ARCO_DEEP_GREEN,
-  ARCO_LIGHT_GREEN,
-  ARCO_DEEP_CYAN,
-  ARCO_LIGHT_CYAN,
-  ARCO_DEEP_BLUE,
-  ARCO_LIGHT_BLUE,
-  ARCO_DEEP_PURPLE,
-  ARCO_LIGHT_PURPLE,
-} from '../style';
+import styleValue from '../style';
 
 /** vueDevtool */
-const vueDevtool = (logBy: string, logName: string) => getDoubleButtonConfigs(logBy, logName, VUE_DEEP_CYAN, VUE_BLUE_GRAY);
+const vueDevtool = (logBy: string, logName: string) => getDoubleButtonConfigs(logBy, logName, styleValue.VUE_DEEP_CYAN, styleValue.VUE_BLUE_GRAY);
 
 /** arco design */
-const arcoRedOrange = (logBy: string, logName: string) => getDoubleButtonConfigs(logBy, logName, ARCO_DEEP_RED, ARCO_DEEP_ORANGE);
-const arcoRedLightOrangeLight = (logBy: string, logName: string) => getDoubleButtonConfigs(logBy, logName, ARCO_LIGHT_RED, ARCO_LIGHT_ORANGE);
-const arcoBluePurple = (logBy: string, logName: string) => getDoubleButtonConfigs(logBy, logName, ARCO_DEEP_BLUE, ARCO_DEEP_PURPLE);
-const arcoBlueLightPurpleLight = (logBy: string, logName: string) => getDoubleButtonConfigs(logBy, logName, ARCO_LIGHT_BLUE, ARCO_LIGHT_PURPLE);
-const arcoYellowGreen = (logBy: string, logName: string) => getDoubleButtonConfigs(logBy, logName, ARCO_DEEP_YELLOW, ARCO_DEEP_GREEN);
-const arcoYellowLightGreenLight = (logBy: string, logName: string) => getDoubleButtonConfigs(logBy, logName, ARCO_LIGHT_YELLOW, ARCO_LIGHT_GREEN);
-const arcoCyanOrange = (logBy: string, logName: string) => getDoubleButtonConfigs(logBy, logName, ARCO_DEEP_CYAN, ARCO_DEEP_ORANGE);
-const arcoCyanLightOrangeLight = (logBy: string, logName: string) => getDoubleButtonConfigs(logBy, logName, ARCO_LIGHT_CYAN, ARCO_LIGHT_ORANGE);
+const arcoRedOrange = (logBy: string, logName: string) => getDoubleButtonConfigs(logBy, logName, styleValue.ARCO_DEEP_RED, styleValue.ARCO_DEEP_ORANGE);
+const arcoRedLightOrangeLight = (logBy: string, logName: string) => getDoubleButtonConfigs(logBy, logName, styleValue.ARCO_LIGHT_RED, styleValue.ARCO_LIGHT_ORANGE);
+const arcoBluePurple = (logBy: string, logName: string) => getDoubleButtonConfigs(logBy, logName, styleValue.ARCO_DEEP_BLUE, styleValue.ARCO_DEEP_PURPLE);
+const arcoBlueLightPurpleLight = (logBy: string, logName: string) => getDoubleButtonConfigs(logBy, logName, styleValue.ARCO_LIGHT_BLUE, styleValue.ARCO_LIGHT_PURPLE);
+const arcoYellowGreen = (logBy: string, logName: string) => getDoubleButtonConfigs(logBy, logName, styleValue.ARCO_DEEP_YELLOW, styleValue.ARCO_DEEP_GREEN);
+const arcoYellowLightGreenLight = (logBy: string, logName: string) => getDoubleButtonConfigs(logBy, logName, styleValue.ARCO_LIGHT_YELLOW, styleValue.ARCO_LIGHT_GREEN);
+const arcoCyanOrange = (logBy: string, logName: string) => getDoubleButtonConfigs(logBy, logName, styleValue.ARCO_DEEP_CYAN, styleValue.ARCO_DEEP_ORANGE);
+const arcoCyanLightOrangeLight = (logBy: string, logName: string) => getDoubleButtonConfigs(logBy, logName, styleValue.ARCO_LIGHT_CYAN, styleValue.ARCO_LIGHT_ORANGE);
 
 
 

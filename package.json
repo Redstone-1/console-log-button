@@ -1,10 +1,10 @@
 {
   "name": "console-log-button",
   "private": false,
-  "version": "0.0.8",
+  "version": "0.0.9",
   "browser": "es/index.js",
   "types": "index.d.ts",
-  "license": "请查阅 LICENSE",
+  "license": "MY LICENSE",
   "author": "xiwenge",
   "homepage": "https://www.npmjs.com/package/console-log-button",
   "scripts": {
@@ -37,7 +37,6 @@
     "es",
     "README",
     "LICENSE",
-    "CHANGELOG",
     "index.d.ts"
   ],
   "config": {

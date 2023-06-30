@@ -6,10 +6,8 @@ import ButtonLogClass, {
   getMaterialConfigs,
   getMaterialGhostConfigs
 } from './button-log';
-import * as styleValue from './style';
-import {
-  emoji
-} from './special-text';
+import styleValue from './style';
+import { emoji } from './special-text';
 
 export {
   buttonLog,
