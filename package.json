@@ -2,8 +2,8 @@
   "name": "console-log-button",
   "private": false,
   "version": "0.0.9",
-  "browser": "es/index.js",
-  "types": "index.d.ts",
+  "main": "lib/index.js",
+  "types": "types",
   "license": "MY LICENSE",
   "author": "xiwenge",
   "homepage": "https://www.npmjs.com/package/console-log-button",
@@ -34,10 +34,10 @@
     "vitest": "^0.31.0"
   },
   "files": [
-    "es",
+    "lib",
     "README",
     "LICENSE",
-    "index.d.ts"
+    "types"
   ],
   "config": {
     "commitizen": {
@@ -53,7 +53,7 @@
   "keywords": [
     "console style",
     "browser console",
-    "button style console"
+    "button-style console"
   ],
   "repository": {
     "type": "git",

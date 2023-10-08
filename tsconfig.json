@@ -13,7 +13,7 @@
     // "noEmit": true,
     "emitDeclarationOnly": true, // 只输出声明文件(ts 产物)
     "declaration": true, // 自动生成声明文件
-    "declarationDir": "dist",
+    "declarationDir": "types",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
