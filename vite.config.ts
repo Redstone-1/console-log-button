@@ -11,7 +11,7 @@ export default defineConfig({
       input: ['src/index.ts'], // 打包的入口文件 https://cn.rollupjs.org/configuration-options/#input
       output: [ // 产物输出配置
         {
-          format: 'umd', // 指定模块化类型 https://cn.rollupjs.org/configuration-options/#output-format
+          format: 'es', // 指定模块化类型 https://cn.rollupjs.org/configuration-options/#output-format
           entryFileNames: '[name].js', // 入口文件名，默认 https://cn.rollupjs.org/configuration-options/#output-entryfilenames
           preserveModules: true, // 该选项将使用原始模块名作为文件名
           dir: 'lib', // 输出的目录
