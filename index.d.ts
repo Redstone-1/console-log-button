@@ -170,7 +170,7 @@ export interface ButtonLog {
 
 export declare const colors: Color;
 export declare const emoji: Emoji;
-export declare const defaultConfig: ButtonConfig;
+export declare const defaultConfig: ButtonConfig[];
 export declare const default7Color: Default7Color;
 export declare const default7GradientColor: Default7GradientColor;
 export declare class ButtonLogImpl implements ButtonLog {
