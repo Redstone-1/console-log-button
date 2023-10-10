@@ -1,5 +1,4 @@
 export default {
-  // emoji
   BIG_CRY: "😭",
   ZI_BI: "🤐",
   SEE_SEXY_GIRL: "😍",

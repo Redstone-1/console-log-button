@@ -24,6 +24,8 @@
     "no-console": 0,
     "no-use-before-define": 2,
     "no-redeclare": 2,
-    "no-undef": 0
+    "no-undef": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-empty-function": 0
   }
 }

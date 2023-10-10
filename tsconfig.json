@@ -1,23 +1,25 @@
 {
   "compilerOptions": {
     "target": "ESNext",
+    "outDir": "dev",
     "useDefineForClassFields": true,
     "module": "ESNext",
     "lib": ["ESNext", "DOM"],
     "moduleResolution": "Node",
     "strict": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "resolveJsonModule": true,
     "isolatedModules": false,
     "esModuleInterop": true,
+    "experimentalDecorators": true,
     // "noEmit": true,
-    "emitDeclarationOnly": true, // 只输出声明文件(ts 产物)
-    "declaration": true, // 自动生成声明文件
-    "declarationDir": "dist",
+    "emitDeclarationOnly": false, // 只输出声明文件(ts 产物)
+    "declaration": true,
+    "declarationDir": "types",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
   },
   "include": ["src"]
 }

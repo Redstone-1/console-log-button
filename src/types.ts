@@ -1,5 +1,16 @@
 export type Decorator = new (...args: any[]) => any;
-export type CursorType = 'auto' | 'default' | 'none' | 'pointer' | 'crosshair' | 'move' | 'text' | 'wait' | 'help' | 'not-allowed';
+
+export type CursorType =
+| 'auto'
+| 'default'
+| 'none'
+| 'pointer'
+| 'crosshair'
+| 'move'
+| 'text'
+| 'wait'
+| 'help'
+| 'not-allowed';
 export interface ButtonStyle {
   /** 背景 */
   background?: string;
@@ -32,10 +43,12 @@ export interface ButtonStyle {
   /** 内边距 */
   padding?: string;
 }
+
 export interface ButtonConfig extends ButtonStyle {
   /** button 的内容 */
-  content: string;
+  content: string
 }
+
 export type Color = {
   DEFAULT_DEEP_CYAN: string;
   DEFAULT_BLUE_GRAY: string;
@@ -101,6 +114,7 @@ export type Color = {
   MATERIAL_DARK_LIGHT_PINK: string;
   MATERIAL_DARK_LIGHT_PURPLE: string;
 };
+
 export type Emoji = {
   BIG_CRY: string;
   ZI_BI: string;
@@ -144,6 +158,7 @@ export type Emoji = {
   HAMBURGER: string;
   CHEERS: string;
 };
+
 export type Default7Color = {
   yellow: '#FFC107';
   orange: '#ff9800';
@@ -153,54 +168,19 @@ export type Default7Color = {
   blue: '#2196f3';
   purple: '#9C27B0';
 };
+
 export type Default7GradientColor = {
-  yellow: 'linear-gradient(to right, #FDB813, #FFAA00)';
-  orange: 'linear-gradient(to right, #FFA500, #FF6347)';
-  red: 'linear-gradient(to right, #FF416C, #FF4B2B)';
-  green: 'linear-gradient(to right, #00b09b, #96c93d)';
-  cyan: 'linear-gradient(to right, #1D976C, #93F9B9)';
-  blue: 'linear-gradient(to right, #2196F3, #4FC3F7)';
-  purple: 'linear-gradient(to right, #DA22FF, #9733EE)';
+  yellow: 'linear-gradient(to right, #FDB813, #FFAA00)',
+  orange: 'linear-gradient(to right, #FFA500, #FF6347)',
+  red: 'linear-gradient(to right, #FF416C, #FF4B2B)',
+  green: 'linear-gradient(to right, #00b09b, #96c93d)',
+  cyan: 'linear-gradient(to right, #1D976C, #93F9B9)',
+  blue: 'linear-gradient(to right, #2196F3, #4FC3F7)',
+  purple: 'linear-gradient(to right, #DA22FF, #9733EE)',
 };
+
 export interface ButtonLog {
   colors?: Color;
   description?: string;
   getButtonStyle?: (config: ButtonConfig[]) => string[];
 }
-
-export declare const colors: Color;
-export declare const emoji: Emoji;
-export declare const defaultConfig: ButtonConfig[];
-export declare const default7Color: Default7Color;
-export declare const default7GradientColor: Default7GradientColor;
-export declare class ButtonLogImpl implements ButtonLog {
-  colors?: Color;
-  description?: string;
-  defineButtonLog(config?: ButtonConfig[]): string[];
-}
-export declare const defineButtonLog: (config?: ButtonConfig[]) => string[];
-
-/**
- * @ Author: xiwenge
- * @ Description: 注入 color
- */
-export declare function Colors(): <T extends Decorator>(constructor: T) => {
-  new(...args: any[]): {
-    [x: string]: any;
-    colors: Color;
-  };
-} & T;
-
-export declare function DefaultButton(backgroundColor?: string): (_target: any, _attribute: any, descriptor: any) => void;
-
-/**
- * @ Author: xiwenge
- * @ Description: 类的描述
- * @param {String} description
- */
-export declare function Description(description: string): <T extends Decorator>(constructor: T) => {
-  new(...args: any[]): {
-    [x: string]: any;
-    description: string;
-  };
-} & T;

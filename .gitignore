@@ -13,6 +13,8 @@ es
 lib
 public
 dist-ssr
+dev
+types
 *.local
 test/node_modules
 

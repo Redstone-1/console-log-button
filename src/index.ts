@@ -1,25 +1,20 @@
-import ButtonLogClass, {
-  buttonLog,
-  materialButtonLog,
-  buttonLogUtils,
-  getDoubleButtonConfigs,
-  getMaterialConfigs,
-  getMaterialGhostConfigs
-} from './button-log';
-import styleValue from './style';
-import { emoji } from './special-text';
+import ButtonLogImpl, { defineButtonLog } from './button-log';
+import colors from './colors';
+import emoji from './emoji';
+import { Colors, DefaultButton } from './decorators';
+import { defaultConfig, default7Color, default7GradientColor } from './constant';
 
 export {
-  buttonLog,
-  materialButtonLog,
+  ButtonLogImpl,
+  defineButtonLog,
 
-  buttonLogUtils,
-  getDoubleButtonConfigs,
-  getMaterialConfigs,
-  getMaterialGhostConfigs,
-
-  styleValue,
+  colors,
   emoji,
-};
 
-export default ButtonLogClass;
+  Colors,
+  DefaultButton,
+
+  default7Color,
+  default7GradientColor,
+  defaultConfig,
+};

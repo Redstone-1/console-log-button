@@ -1,16 +1,37 @@
-import ButtonLogClass, { buttonLog, materialButtonLog } from './baseButtonLog';
-import { buttonLogUtils } from './buttonLogUtils';
-import { getDoubleButtonConfigs, getMaterialConfigs, getMaterialGhostConfigs } from './common';
+import { Colors, DefaultButton, Description } from '../decorators';
+import { transStyleToString, genButtonTemplate } from '../utils';
+import { ButtonLog, ButtonConfig, Color } from '../types';
 
-export {
-  buttonLog,
-  materialButtonLog,
+@Colors()
+@Description('ButtonLog')
+class ButtonLogImpl implements ButtonLog {
+  public colors?: Color;
+  public description?: string;
 
-  buttonLogUtils,
+  @DefaultButton()
+  defineButtonLog (config: ButtonConfig[] = []) {
+    try {
+      const contentArr: string[] = [];
+      const styles = config?.length
+        ? config.map((item: ButtonConfig) => {
+            const { content, ...rest } = item || {};
+            contentArr.push(content);
+            return transStyleToString(rest);
+          })
+        : [];
+      return [
+        genButtonTemplate(contentArr),
+        ...styles,
+      ];
+    } catch (error) {
+      console.error('error', error);
+      return [];
+    }
+  }
+}
 
-  getDoubleButtonConfigs,
-  getMaterialConfigs,
-  getMaterialGhostConfigs
-};
+export default ButtonLogImpl;
 
-export default ButtonLogClass;
+const buttonLog = new ButtonLogImpl();
+
+export const defineButtonLog = buttonLog.defineButtonLog;

@@ -1,7 +1,7 @@
 export default {
-  // vue devtool
-  VUE_DEEP_CYAN: "#41b883",
-  VUE_BLUE_GRAY: "#35495e",
+  // default
+  DEFAULT_DEEP_CYAN: "#41b883",
+  DEFAULT_BLUE_GRAY: "#35495e",
 
   // arco design
   ARCO_DEEP_RED: "#F53F3F",
@@ -43,7 +43,6 @@ export default {
   MATERIAL_DEEP_GREEN: "#2e7d32",
   MATERIAL_LIGHT_YELLOW: "#fff59d",
   MATERIAL_LIGHT_RED: "#e57373",
-  MATERIAL_LIGHT_GREEN_2: "#81c784",
   MATERIAL_LIGHT_ORANGE: "#ffcc80",
   MATERIAL_LIGHT_PURPLE: "#ba68c8",
   MATERIAL_LIGHT_GREY: "#bdbdbd",
